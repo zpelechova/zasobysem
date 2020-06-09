@@ -1,1 +1,1 @@
-# zasoby_sem
+# Zásoby sem
