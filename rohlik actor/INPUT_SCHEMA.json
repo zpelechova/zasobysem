@@ -1,0 +1,23 @@
+{
+    "title": "Rohlik delivery slots download",
+    "description": "To see delivery slots addres in form of street with number and city is required.",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "street": {
+            "title": "street",
+            "type": "string",
+            "description": "username on toggl.com",
+            "prefill": "Jindřicha Plachty 15",
+            "editor": "textfield"
+	    },
+        "city": {
+            "title": "city",
+            "type": "string",
+            "description": "city",
+            "prefill": "Praha 5",
+            "editor": "textfield"
+        }
+    },
+    "required": ["street", "city"]
+}

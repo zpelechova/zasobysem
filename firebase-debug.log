@@ -1,0 +1,21 @@
+[debug] [2020-06-08T20:58:39.572Z] ----------------------------------------------------------------------
+[debug] [2020-06-08T20:58:39.576Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\zpele\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-06-08T20:58:39.576Z] CLI Version:   8.4.2
+[debug] [2020-06-08T20:58:39.577Z] Platform:      win32
+[debug] [2020-06-08T20:58:39.577Z] Node Version:  v12.16.1
+[debug] [2020-06-08T20:58:39.580Z] Time:          Mon Jun 08 2020 22:58:39 GMT+0200 (GMT+02:00)
+[debug] [2020-06-08T20:58:39.580Z] ----------------------------------------------------------------------
+[debug] [2020-06-08T20:58:39.580Z] 
+[debug] [2020-06-08T20:58:39.591Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-06-08T20:58:39.592Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\zpele\Disk Google\DA-web\zasoby_sem
+
