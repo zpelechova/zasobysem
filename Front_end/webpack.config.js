@@ -5,11 +5,14 @@ const path = require('path');
 
 module.exports = {
   entry: [
-    './src/main.js'
+    './src/index.js'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
+  },
+  resolve: {
+    extensions: ['.js', '.vue'],
   },
   module: {
     rules: [
@@ -36,7 +39,7 @@ module.exports = {
             options: {
               name: '[name]-[hash:6].[ext]',
               outputPath: 'assets/img',
-              esModule: false
+              esModule: false,
             }
           }
         ]

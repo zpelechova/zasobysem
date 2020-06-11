@@ -1,3 +1,3 @@
 <template>
-  <h1>rozvoz</h1>
+  <h1>Rozvoz</h1>
 </template>

@@ -14,7 +14,7 @@ Vue.use(VueRouter);
 const router = new VueRouter({
   mode: 'history',
   routes: [
-    { path: '/homepage', component: Homepage },
+    { path: '/', component: Homepage },
     { path: '/rozvoz', component: Rozvoz },
     { path: '/baliky', component: Baliky },
     { path: '/o_projektu', component: O_projektu },

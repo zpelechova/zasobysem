@@ -1,8 +1,8 @@
 {
-  "name": "scratch",
+  "name": "vue-starter",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "build": "webpack -d",
     "watch": "webpack -wd"
@@ -20,6 +20,7 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "vue-router": "^3.3.2"
   }
 }
