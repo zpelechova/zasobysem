@@ -15,63 +15,65 @@
   <body>
     <br>
     <div id="app">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm">
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text">Ulice</span>
-              </div>
-              <input
-                type="text"
-                class="form-control"
-                aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-default"
-                id="street"
-              />
-            </div>
-          </div>
-          <div class="col-sm">
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text" >Město</span>
-              </div>
-              <input
-                type="text"
-                class="form-control"
-                aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-default"
-                id="city"
-              />
-            </div>
-          </div>
-          <div class="col-sm">
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text">PSČ</span>
-              </div>
-              <input
-                type="text"
-                class="form-control"
-                aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-default"
-                id="zip"
-              />
-            </div>
-          </div>
+		<p v-if="isLoading">Loading...</p>
+		<div v-if="!isLoading">
+		  <div class="container">
+			<div class="row">
+			  <div class="col-sm">
+				<div class="input-group mb-3">
+				  <div class="input-group-prepend">
+					<span class="input-group-text">Ulice</span>
+				  </div>
+				  <input
+					type="text"
+					class="form-control"
+					aria-label="Sizing example input"
+					aria-describedby="inputGroup-sizing-default"
+					id="street"
+				  />
+				</div>
+			  </div>
+			  <div class="col-sm">
+				<div class="input-group mb-3">
+				  <div class="input-group-prepend">
+					<span class="input-group-text" >Město</span>
+				  </div>
+				  <input
+					type="text"
+					class="form-control"
+					aria-label="Sizing example input"
+					aria-describedby="inputGroup-sizing-default"
+					id="city"
+				  />
+				</div>
+			  </div>
+			  <div class="col-sm">
+				<div class="input-group mb-3">
+				  <div class="input-group-prepend">
+					<span class="input-group-text">PSČ</span>
+				  </div>
+				  <input
+					type="text"
+					class="form-control"
+					aria-label="Sizing example input"
+					aria-describedby="inputGroup-sizing-default"
+					id="zip"
+				  />
+				</div>
+			  </div>
+			</div>
+			<button
+			  type="button"
+			  class="btn btn-primary btn-lg btn-block"
+			  v-on:click="display"
+			>
+			  Zobrazit nejbližší volný slot
+			</button>
+			<div id="result" class="alert alert-success" role="alert">
+			  
+			</div>
         </div>
-        <button
-          type="button"
-          class="btn btn-primary btn-lg btn-block"
-          v-on:click="display"
-        >
-          Zobrazit nejbližší volný slot
-        </button>
-        <div id="result" class="alert alert-success" role="alert">
-          
-        </div>
-        </div>
-      
+      </div>
     </div>
     
     <script src="kosik.js"></script>
