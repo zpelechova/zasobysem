@@ -31,7 +31,7 @@ Apify.main(async () => {
 
   const deliveryAddress = `https://www.rohlik.cz/services/frontend-service/timeslots-api/0?userId=&addressId=${addressId}`
 
-  const deliveryResponse = await   fetch(deliveryAddress);
+  const deliveryResponse = await fetch(deliveryAddress);
   const deliveryJson = await deliveryResponse.json();
   console.log(deliveryJson.data.firstDeliveryText.default);
   console.log(deliveryJson.data.firstDeliveryAvailableSinceMessage);
