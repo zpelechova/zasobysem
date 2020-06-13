@@ -11,9 +11,13 @@
       crossorigin="anonymous"
     />
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://api.mapy.cz/loader.js"></script>
+    <script>
+      Loader.load();
+    </script>
   </head>
   <body>
-    <br>
+    <br />
     <div id="app">
       <div class="container">
         <div class="row">
@@ -28,13 +32,14 @@
                 aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing-default"
                 id="street"
+                v-model="street"
               />
             </div>
           </div>
           <div class="col-sm">
             <div class="input-group mb-3">
               <div class="input-group-prepend">
-                <span class="input-group-text" >Město</span>
+                <span class="input-group-text">Město</span>
               </div>
               <input
                 type="text"
@@ -67,13 +72,12 @@
         >
           Zobrazit nejbližší volný slot
         </button>
-        <div id="result" class="alert alert-success" role="alert">
-          
-        </div>
-        </div>
-      
+        <div id="result" class="alert alert-success" role="alert"></div>
+      </div>
     </div>
-    
+<div id="map">
+  
+</div>
     <script src="kosik.js"></script>
   </body>
 </html>

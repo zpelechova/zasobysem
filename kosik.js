@@ -17,6 +17,7 @@ new Vue({
       fetch(proxyUrl + targetUrl)
         .then((resp) => resp.json())
         .then((json) => displayElm.textContent = `Nejdříve vám Košík přiveze nákup ${json.earliest_timeslot}.`);
+ 
     }
   }
 });
