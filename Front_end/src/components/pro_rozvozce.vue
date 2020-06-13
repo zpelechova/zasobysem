@@ -1,12 +1,13 @@
 <template class = "to__retailers">
   <div
-    class="container">
+    class="pro__rozvozce__container">
       <div class="background__image">
-        <!-- <div><h1 >KONTAKTUJTE NÁS</h1>
+        <div class="content">
+          
         <p>
-          Také rozvážíte zboží na adresy a chtěli byste být součástí srovnávání rozvozů na našich stránkách? Napište nám.
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus odio omnis dolores. Aut dolores modi asperiores fugiat? Sunt, assumenda perspiciatis? 
         </p>
-        </div> -->
+        </div>
       </div>
   </div>
 </template>
@@ -18,20 +19,26 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  display: flex;
-  min-height: 100vh;
-  align-items: center;
+.pro__rozvozce__container {
+height: 81vh;
 }
+
 .background__image {
   background-image: url(../assets/img/woodland-656969_registration.jpg);
   display: flex;
   flex-basis: 100%;
+  justify-content: center;
   align-items: center;
   height: 62vh;
   background-color: #9D9065;
   background-size: cover;
   background-position: center center;
+  border: 5px solid  #9D9065;
+}
+
+.content {
+  width:38vw;
+  height: 38vh;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -41,13 +48,13 @@ export default {
 }
 
 @media screen and (min-width: 1200px) {
-.container{
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center;
+.pro__rozvozce__container {
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction:row;
 }
 .background__image{
-  flex-basis: 62vw;
+
 }
 }
 </style>

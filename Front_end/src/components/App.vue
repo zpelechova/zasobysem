@@ -1,21 +1,23 @@
 <template>
-  <div class="container">
-    <div class="navigation">
-      <div class="home">
-        <router-link to="/">
-          <img
-            class="zasoby_logo"
-            border="0"
-            alt="Zasoby_sem_logo"
-            src="..\assets\img\zasoby_sem_logo.png"
-          />
-        </router-link>
+  <div>
+    <header class="container">
+      <div class="navigation">
+        <div class="home">
+          <router-link to="/">
+            <img
+              class="zasoby_logo"
+              border="0"
+              alt="Zasoby_sem_logo"
+              src="..\assets\img\zasoby_sem_logo.png"
+            />
+          </router-link>
+        </div>
+        <div class="menu">
+          <router-link to="/o_projektu" class="about__us">O PROJEKTU</router-link>
+          <router-link to="/pro_rozvozce" class="pro__rozvozce">ROZVOZCŮM</router-link>
+        </div>
       </div>
-      <div class="menu">
-        <router-link to="/o_projektu" class="about__us">O PROJEKTU</router-link>
-        <router-link to="/pro_rozvozce" class="pro__rozvozce">ROZVOZCŮM</router-link>
-      </div>
-    </div>
+    </header>
     <router-view></router-view>
   </div>
 </template>
@@ -35,8 +37,9 @@ export default {
 }
 
 html {
+  width: 100vw;
+  height: 100vh;
   font-family: "Cormorant", serif;
-  font-size: 15px;
 }
 
 *,
@@ -45,64 +48,57 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
 .navigation {
+  height: 19vh;
+  width: 100vw;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
 }
 
 .home {
+  flex-basis: 100vw;
+  height: 13vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
 }
 .zasoby_logo {
   width: 62vw;
   height: auto;
 }
 .menu {
+  height: 6vh;
+  flex-basis: 100vw;
   background-color: #9d9065;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 2vh 20vw 2vh 20vw;
+  justify-content: space-around;
 }
+
 .about__us,
 .pro__rozvozce {
   text-decoration: none;
   background-color: #9d9065;
   color: #fff9e8;
-  font-size: 1.25em;
+  font-size: 2vh;
   font-weight: bold;
-  padding: 2vh;
-  flex: 1 1;
 }
-
-.pro__rozvozce {
-}
-
-@media screen (min-width: 768px) and (max-width: 1199px) {
-  
-}
-
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .navigation {
-    /* justify-content: space-evenly; */
-    flex-direction: row;
+    flex-wrap: nowrap;
   }
   .home {
-    margin-left: 19vw;
-    margin-top: 3vw;
-    margin-right: 2vw;
-    margin-bottom: 3vw;
-    flex-grow: 1;
+    height: 19vh;
+    flex-basis: 34vw;
   }
   .zasoby_logo {
-    width: 20vw;
-    height: auto;
+    width: auto;
+    height: 7vh;
   }
 
   .about__us,
@@ -110,20 +106,50 @@ html {
     background-color: #fff9e8;
     color: #9d9065;
     font-weight: bold;
-    font-size: 2.441vh;
-    padding: 0vh;
+    font-size: 4vh;
   }
 
   .menu {
+    flex-basis: 66vw;
+    height: 19vh;
     background-color: #fff9e8;
-    flex-wrap: nowrap;
     align-items: center;
-    flex-grow: 2;
-    padding: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .navigation {
+    width: 62vw;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  .home {
+    height: 19vh;
+    flex-basis: 34%;
+  }
+  .zasoby_logo {
+    width: auto;
+    height: 7vh;
   }
 
+  .about__us,
   .pro__rozvozce {
-    margin-right: 19vw;
+    background-color: #fff9e8;
+    color: #9d9065;
+    font-weight: bold;
+    font-size: 4vh;
+  }
+
+  .menu {
+    flex-basis: 66%;
+    height: 19vh;
+    background-color: #fff9e8;
+    align-items: center;
   }
 }
 </style>
