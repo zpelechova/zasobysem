@@ -40,12 +40,10 @@ html {
   width: 100vw;
   height: 100vh;
   font-family: "Cormorant", serif;
-}
+  font-weight: bold;
+  color: #9D9065;
+  font-size: 15px;
 
-*,
-:after,
-:before {
-  box-sizing: inherit;
 }
 
 body {
@@ -72,12 +70,15 @@ body {
   height: auto;
 }
 .menu {
-  height: 6vh;
-  flex-basis: 100vw;
-  background-color: #9d9065;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+    height: 6vh;
+    flex-basis: 95vw;
+    background-color: #9D9065;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 10px 9px #9D9065;
 }
 
 .about__us,
@@ -87,8 +88,9 @@ body {
   color: #fff9e8;
   font-size: 2vh;
   font-weight: bold;
+  text-shadow: 0px 0px 10px #fff9e8;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 576px) and (max-width: 991px) {
   .navigation {
     flex-wrap: nowrap;
   }
@@ -106,7 +108,7 @@ body {
     background-color: #fff9e8;
     color: #9d9065;
     font-weight: bold;
-    font-size: 4vh;
+    font-size: 3vh;
   }
 
   .menu {
@@ -114,10 +116,12 @@ body {
     height: 19vh;
     background-color: #fff9e8;
     align-items: center;
+    box-shadow: none;
+    text-shadow: 0px 0px 10px #9D9065;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
   .container {
     display: flex;
     flex-direction: column;
@@ -150,6 +154,8 @@ body {
     height: 19vh;
     background-color: #fff9e8;
     align-items: center;
+    box-shadow: none;
+    text-shadow: 0px 0px 10px #9D9065;
   }
 }
 </style>
