@@ -41,9 +41,8 @@ html {
   height: 100vh;
   font-family: "Cormorant", serif;
   font-weight: bold;
-  color: #9D9065;
+  color: #9d9065;
   font-size: 15px;
-
 }
 
 body {
@@ -70,15 +69,15 @@ body {
   height: auto;
 }
 .menu {
-    height: 6vh;
-    flex-basis: 95vw;
-    background-color: #9D9065;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 0 10px 9px #9D9065;
+  height: 6vh;
+  flex-basis: 95vw;
+  background-color: #9d9065;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 10px 9px #9d9065;
 }
 
 .about__us,
@@ -117,7 +116,7 @@ body {
     background-color: #fff9e8;
     align-items: center;
     box-shadow: none;
-    text-shadow: 0px 0px 10px #9D9065;
+    text-shadow: 0px 0px 10px #9d9065;
   }
 }
 
@@ -155,7 +154,7 @@ body {
     background-color: #fff9e8;
     align-items: center;
     box-shadow: none;
-    text-shadow: 0px 0px 10px #9D9065;
+    text-shadow: 0px 0px 10px #9d9065;
   }
 }
 </style>
