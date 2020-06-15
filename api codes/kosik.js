@@ -1,8 +1,5 @@
 new Vue({
   el: '#app',
-  data:{
-	isLoading: true
-  },
   methods: {
     display() {
       const encodeURIParam = (stringParam) => {
@@ -19,15 +16,8 @@ new Vue({
       const displayElm = document.getElementById('result')
       fetch(proxyUrl + targetUrl)
         .then((resp) => resp.json())
-<<<<<<< HEAD
-        .then((json) => {
-			displayElm.textContent = `Nejdříve vám Košík přiveze nákup ${json.earliest_timeslot}.`;
-			this.isLoading = false;
-		});
-=======
         .then((json) => displayElm.textContent = `Nejdříve vám Košík přiveze nákup ${json.earliest_timeslot}.`);
  
->>>>>>> master
     }
   }
 });
