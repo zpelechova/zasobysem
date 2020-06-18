@@ -1,29 +1,49 @@
 <template class = "homepage">
   <div class="homepage__container">
-      <div class="background__image">
-        <div class="content">
-         <h1>Lorem ipsum,</h1> 
-         <h2>dolor sit amet</h2>
-          <p>consectetur adipisicing elit. Perspiciatis minima totam quam eligendi, facilis voluptas quibusdam, vel nostrum temporibus impedit iure id voluptates cum ad provident sunt</p> 
-         
-         <!-- voluptate fugiat magni, optio numquam reprehenderit. Dolores neque doloremque corporis, soluta, optio assumenda nostrum, maiores porro laudantium eius similique architecto vitae minima. Vero voluptates accusamus tenetur debitis veritatis distinctio modi quibusdam rerum exercitationem, perferendis officia nisi et velit molestiae neque mollitia? Repudiandae assumenda dolore et! Ut vel aperiam qui omnis facilis, dolorem totam consectetur obcaecati inventore nobis veniam, eveniet alias officia, nisi ullam suscipit maxime impedit asperiores laborum distinctio nemo molestias in iure!   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis minima totam quam eligendi, facilis voluptas quibusdam, vel nostrum temporibus impedit iure id voluptates cum ad provident sunt  -->
-         
-         <!-- voluptate fugiat magni, optio numquam reprehenderit. Dolores neque doloremque corporis, soluta, optio assumenda nostrum, maiores porro laudantium eius similique architecto vitae minima. Vero voluptates accusamus tenetur debitis veritatis distinctio modi quibusdam rerum exercitationem, perferendis officia nisi et velit molestiae neque mollitia? Repudiandae assumenda dolore et! Ut vel aperiam qui omnis facilis, dolorem totam consectetur obcaecati inventore nobis veniam, eveniet alias officia, nisi ullam suscipit maxime impedit asperiores laborum distinctio nemo molestias in iure!  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis minima totam quam eligendi, facilis voluptas quibusdam, vel nostrum temporibus impedit iure id voluptates cum ad provident sunt 
-         
-         voluptate fugiat magni, optio numquam reprehenderit. Dolores neque doloremque corporis, soluta, optio assumenda nostrum, maiores porro laudantium eius similique architecto vitae minima. Vero voluptates accusamus tenetur debitis veritatis distinctio modi quibusdam rerum exercitationem, perferendis officia nisi et velit molestiae neque mollitia? Repudiandae assumenda dolore et! Ut vel aperiam qui omnis facilis, dolorem totam consectetur obcaecati inventore nobis veniam, eveniet alias officia, nisi ullam suscipit maxime impedit asperiores laborum distinctio nemo molestias in iure!
-         voluptate fugiat magni, optio numquam reprehenderit. Dolores neque doloremque corporis, soluta, optio assumenda nostrum, maiores porro laudantium eius similique architecto vitae minima. Vero voluptates accusamus tenetur debitis veritatis distinctio modi quibusdam rerum exercitationem, perferendis officia nisi et velit molestiae neque mollitia? Repudiandae assumenda dolore et! Ut vel aperiam qui omnis facilis, dolorem totam consectetur obcaecati inventore nobis veniam, eveniet alias officia, nisi ullam suscipit maxime impedit asperiores laborum distinctio nemo molestias in iure!   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis minima totam quam eligendi, facilis voluptas quibusdam, vel nostrum temporibus impedit iure id voluptates cum ad provident sunt 
-         
-         voluptate fugiat magni, optio numquam reprehenderit. Dolores neque doloremque corporis, soluta, optio assumenda nostrum, maiores porro laudantium eius similique architecto vitae minima. Vero voluptates accusamus tenetur debitis veritatis distinctio modi quibusdam rerum exercitationem, perferendis officia nisi et velit molestiae neque mollitia? Repudiandae assumenda dolore et! Ut vel aperiam qui omnis facilis, dolorem totam consectetur obcaecati inventore nobis veniam, eveniet alias officia, nisi ullam suscipit maxime impedit asperiores laborum distinctio nemo molestias in iure!  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis minima totam quam eligendi, facilis voluptas quibusdam, vel nostrum temporibus impedit iure id voluptates cum ad provident sunt 
-         
-         voluptate fugiat magni, optio numquam reprehenderit. Dolores neque doloremque corporis, soluta, optio assumenda nostrum, maiores porro laudantium eius similique architecto vitae minima. Vero voluptates accusamus tenetur debitis veritatis distinctio modi quibusdam rerum exercitationem, perferendis officia nisi et velit molestiae neque mollitia? Repudiandae assumenda dolore et! Ut vel aperiam qui omnis facilis, dolorem totam consectetur obcaecati inventore nobis veniam, eveniet alias officia, nisi ullam suscipit maxime impedit asperiores laborum distinctio nemo molestias in iure! -->
-        </div>
+    <div class="background__image">
+      <div class="content">
+        <p>KDO MI DOVEZE NÁKUP?</p>
+        <form>
+          <div>
+            <input
+              type="text"
+              class="street__address"
+              name="street__address"
+              placeholder="ULICE A ČÍSLO"
+            />
+            <input 
+            type="text" 
+            class="postcode" 
+            name="postcode" 
+            placeholder="PSČ" 
+            />
+          </div>
+          <div>
+            <button type="button">POSLAT</button>
+          </div>
+        </form>
+
+        <router-link to="/Delivery" class="delivery">ROZVOZ</router-link>
+        <router-link to="/Parcels" class="parcels">BALÍKY</router-link>
       </div>
+    </div>
+    <div class="retailer__logos">
+      <a href="https://www.kosik.cz/" target="_blank">
+        <img class="kosik__logo" border="0" alt="kosik__logo" src="..\assets\img\kosik_logo.png" />
+      </a>
+      <a href="https://rohlik.cz" target="_blank">
+        <img class="rohlik__logo" border="0" alt="rohlik__logo" src="..\assets\img\rohlik_logo.png" />
+      </a>
+      <a href="https://nakup.itesco.cz/groceries/" target="_blank">
+        <img class="tesco__logo" border="0" alt="tesco__logo" src="..\assets\img\tesco_logo.png" />
+      </a>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Homepage",
+  name: "Homepage"
 };
 </script>
 
@@ -33,77 +53,94 @@ p {
   font-size: 15px;
 }
 
- h1 {
-  font-size: 1.563em;
-}
-
-h2 {
-  font-size: 1.25em;
-}
-
 .homepage__container {
-    min-height: 62vh;
+    max-height: 85vh;
     margin-left: auto;
     margin-right: auto;
     width: 95vw;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .background__image {
   background-image: url(../assets/img/homepage_road.jpg);
   display: flex;
-  flex-basis: 100vw;
+  flex-grow: 4;
+  flex-shrink: 4;
   justify-content: center;
   align-items: flex-start;
   min-height: 62vh;
-  background-color: #9D9065;
+  background-color: #9d9065;
   background-size: cover;
   background-position: center center;
-  box-shadow: 0 0 10px 8px #9D9065;
+  box-shadow: 0 0 10px 8px #9d9065;
   padding: 19vw 13vw 19vw 13vw;
 }
 
 .content {
   width: 62vw;
-  border: 5px solid  #9D9065;
+  border: 5px solid #9d9065;
   padding: 1em;
   opacity: 0.75;
-  box-shadow: 0 0 10px 8px #9D9065;
+  box-shadow: 0 0 10px 8px #9d9065;
+  background-color: #fff9e8;
+
+}
+
+.retailer__logos{
+    align-self: center;
+    padding: 3vh;
+    width: 100vw;
+    display: flex;
+    flex-grow: 0.3;
+    flex-shrink: 0.3;
+    align-items: flex-end;
+    align-items: space-evenly;
+    justify-content: space-evenly;
+}
+
+.kosik__logo,
+.rohlik__logo,
+.tesco__logo {
+  width: 20vw;
+  height: auto;
 }
 
 @media screen and (min-width: 576px) and (max-width: 991px) {
-h1 {
-  font-size: 2.441em;
-}
 
-h2 {
-  font-size: 1.953em;
-}
- .background__image {
-    min-height: 62vh;
+  .background__image {
+    min-height: 78vh;
     padding: 8vh 0vw 8vh 0vw;
-    margin-bottom: 19vh;
- } 
+  }
+.homepage__container {
+  height: auto;
+}
+.kosik__logo, 
+.rohlik__logo, 
+.tesco__logo {
+    width: 10vw;
+    height: auto;
+}
 }
 
 @media screen and (min-width: 992px) {
-p {
-font-size: 1.25em;
-}
+  p {
+    font-size: 1.25em;
+  }
 
-h1 {
-  font-size: 3.815em;
-}
-
-h2 {
-  font-size: 3.052em;
-}
-
-.background__image{
+  .background__image {
     min-height: 62vh;
-    padding: 8vh 0vw 8vh 0vw;
-    margin-bottom: 19vh;
+        padding: 8vh 8vw 8vh 8vw;
+  }
+  .homepage__container {
+  height: auto;
+  width: 62vw;
+}
+.kosik__logo, 
+.rohlik__logo, 
+.tesco__logo {
+    width: 10vw;
+    height: auto;
 }
 }
 
@@ -111,14 +148,23 @@ h2 {
   .background__image {
     flex-basis: 62vw;
     min-height: 62vh;
-    padding: 8vh 19vh 8vh 19vh;
-    margin-bottom: 19vh
+   padding: 8vh 8vw 8vh 8vw;
   }
 
-  .content[data-v-5d0d7ea8] {
+  .content {
     width: 38vw;
-    border: 5px solid #9D9065;
+    border: 5px solid #9d9065;
     padding: 1em;
+  }
+  .homepage__container {
+  height: auto;
+  width: 62vw;
+}
+.kosik__logo, 
+.rohlik__logo, 
+.tesco__logo {
+    width: 10vw;
+    height: auto;
 }
 }
 </style>

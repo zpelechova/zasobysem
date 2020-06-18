@@ -1,37 +1,51 @@
 <template>
   <div>
-    <header class="container">
-      <div class="navigation">
-        <div class="home">
-          <router-link to="/">
-            <img
-              class="zasoby_logo"
-              border="0"
-              alt="Zasoby_sem_logo"
-              src="..\assets\img\zasoby_sem_logo.png"
-            />
-          </router-link>
-        </div>
-        <div class="menu">
-          <router-link to="/o_projektu" class="about__us">O PROJEKTU</router-link>
-          <router-link to="/pro_rozvozce" class="pro__rozvozce">ROZVOZCŮM</router-link>
-        </div>
+    <div class="top__navigation">
+      <div class="home">
+        <router-link to="/">
+          <img
+            class="zasoby_logo"
+            border="0"
+            alt="Zasoby_sem_logo"
+            src="..\assets\img\zasoby_logo.png"
+          />
+        </router-link>
+        <a @click="toggle" class="icon">
+          <i class="hamburger fa fa-bars"></i>
+        </a>
       </div>
-    </header>
+      <div :class="isOpen ? 'menu' : 'closed__menu'">
+        <router-link to="/o_projektu" class="about__us">O PROJEKTU</router-link>
+        <router-link to="/pro_rozvozce" class="pro__rozvozce">ROZVOZCŮM</router-link>
+      </div>
+    </div>
     <router-view></router-view>
   </div>
 </template>
-
+// <button
+//         class="btn" :class="{'btn-active':active}"
+//         v-on:click="isOpen"
+//       >
 <script>
 export default {
-  name: "App"
+  name: "App",
+  data: function() {
+    return {
+      isOpen: false
+    };
+  },
+  methods: {
+    toggle() {
+      this.isOpen = !this.isOpen;
+      console.log("click");
+    }
+  }
 };
 </script>
 
 <style lang="css">
 * {
   box-sizing: border-box;
-  background-color: #fff9e8;
   margin: 0px;
   border: 0px;
 }
@@ -48,113 +62,126 @@ html {
 body {
   width: 100vw;
   height: 100vh;
+  background-color: #fff9e8;
 }
 
-.navigation {
-  height: 19vh;
-  width: 100vw;
+.top__navigation {
   display: flex;
-  flex-wrap: wrap;
 }
 
-.home {
-  flex-basis: 100vw;
-  height: 13vh;
+.closed__menu {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-grow: 1;
 }
+.about__us,
+.pro__rozvozce {
+  margin: 3vh;
+  text-decoration: none;
+  color: #9d9065;
+}
+
+.icon {
+  display: none;
+}
+
 .zasoby_logo {
-  width: 62vw;
-  height: auto;
+  width: 8vw;
+  margin: 3vh;
+  margin-left: 4vh;
+  flex-grow: 1
 }
+
+@media screen and (max-width: 575px) {
+.top__navigation {
+  display: block;
+}
+.home {
+  height: 10vh;
+  margin-bottom: 3vh;
+}
+
+.zasoby_logo {
+  width: 20vw;
+  height: auto;
+  margin: 3vw;
+}
+
+i.hamburger {
+  font-size: 15vw;
+  margin: 3vw;
+}
+
 .menu {
-  height: 6vh;
-  flex-basis: 95vw;
-  background-color: #9d9065;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 0 10px 9px #9d9065;
+    background-color: #9d9065;
+    box-shadow: 0 0 10px 8px #9d9065;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.closed__menu {
+    background-color: #9d9065;
+    box-shadow: 0 0 10px 8px #9d9065;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    display: none;
+}
+/* .top__navigation {
+  overflow: hidden;
+  background-color: #fff9e8;
+} */
+
+.zasoby_logo,
+.icon {
+  float: left;
+  display: block;
 }
 
 .about__us,
 .pro__rozvozce {
-  text-decoration: none;
+    display: block;
+    text-align: center;
+    color: #fff9e8;
+    text-decoration: none;
+    font-size: 3vh;
+    margin: 3vw;
+}
+.zasoby_logo:hover {
+  background-color: #ffe355;
+}
+
+  .top__navigation a.icon {
+    float: right;
+    display: block;
+  }
+
+.top__navigation a:hover {
+  background-color: #ffe355;
+  color: #9d9065;
+}
+/* k čemu je tohle? */
+.top__navigation a.active {
   background-color: #9d9065;
   color: #fff9e8;
-  font-size: 2vh;
-  font-weight: bold;
-  text-shadow: 0px 0px 10px #fff9e8;
-}
-@media screen and (min-width: 576px) and (max-width: 991px) {
-  .navigation {
-    flex-wrap: nowrap;
-  }
-  .home {
-    height: 19vh;
-    flex-basis: 34vw;
-  }
-  .zasoby_logo {
-    width: auto;
-    height: 7vh;
-  }
-
-  .about__us,
-  .pro__rozvozce {
-    background-color: #fff9e8;
-    color: #9d9065;
-    font-weight: bold;
-    font-size: 3vh;
-  }
-
-  .menu {
-    flex-basis: 66vw;
-    height: 19vh;
-    background-color: #fff9e8;
-    align-items: center;
-    box-shadow: none;
-    text-shadow: 0px 0px 10px #9d9065;
-  }
 }
 
-@media screen and (min-width: 992px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .navigation {
-    width: 62vw;
-    justify-content: center;
-    flex-wrap: nowrap;
-  }
-  .home {
-    height: 19vh;
-    flex-basis: 34%;
-  }
-  .zasoby_logo {
-    width: auto;
-    height: 7vh;
-  }
 
-  .about__us,
-  .pro__rozvozce {
-    background-color: #fff9e8;
-    color: #9d9065;
-    font-weight: bold;
-    font-size: 4vh;
-  }
 
-  .menu {
-    flex-basis: 66%;
-    height: 19vh;
-    background-color: #fff9e8;
-    align-items: center;
-    box-shadow: none;
-    text-shadow: 0px 0px 10px #9d9065;
-  }
-}
+
+
+    /* .top__navigation__open {
+      position: relative;
+    } */
+    /* .top__navigation__open .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    } */
+    /* .top__navigation__open a {
+      float: none;
+      display: block;
+      text-align: left;
+    } */
+    }
 </style>

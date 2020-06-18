@@ -1,13 +1,31 @@
 <template class = "to__retailers">
   <div
-    class="about__us__container">
+    class="parcels__container">
       <div class="background__image">
-        <div class="content">
-          <p>Už se vám někdy stalo, že jste nestihli včas nakoupit a ještě k tomu jste věděli, že se do obchodu na nákup prostě nedostanete ani dnes ani zítra? 
-V takové chvíli by bylo skvělé, kdybyste prostě mohli zavolat někoho, kdo vám přiveze zásoby, které potřebujete. A to co nejrychleji. 
-Ale kdo by to měl být a kdy nejdříve může zásoby přivézt? 
-Právě na tuto otázku odpovídá projekt Zásoby sem! Klade si za cíl shromáždit co nejvíce informací na jedno místo a tím zrychlit a usnadnit výběr e-shopu, který vám může potraviny dovézt. 
-Stačí zadat adresu, na kterou byste si chtěli nechat nákup přivézt. Jako odpověď dostanete informace, kdo a kdy by vám mohl nákup přivézt. Dozvíte se také minimální výši nákupu a cenu dopravy. Je na vás, koho si pro dovoz jídla nakonec vyberete. </p>
+
+         
+          <div class="content">
+          <p>NA VAŠI ADRESU ZASÍLÁ TRVANLIVÝ SORTIMENT:</p> 
+         <p>Na eshop se dostanete skrz logo rozvozce..</p>
+          <a href="https://www.kosik.cz/" target="_blank">
+            <img
+              class="kosik__logo"
+              border="0"
+              alt="kosik__logo"
+              src="..\assets\img\kosik_logo.png"
+            />
+          </a>
+          <a href="https://nakup.itesco.cz/groceries/" target="_blank">
+            <img
+              class="tesco__logo"
+              border="0"
+              alt="kosik__logo"
+              src="..\assets\img\tesco_logo.png"
+            />
+          </a>
+          <p>Čerstvé pečivo si sice neobjednáte, ale nebuďte smutní, objednejte si mouku a upečte si svoje vlastní domácí pečivo. Jak na to se dozvíte <router-link to="/bake_bread" class="bake__bread">ZDE</router-link></p> 
+         
+         
         </div>
       </div>
   </div>
@@ -15,7 +33,7 @@ Stačí zadat adresu, na kterou byste si chtěli nechat nákup přivézt. Jako o
 
 <script>
 export default {
-  name: "AboutUs",
+  name: "Parcels",
 };
 </script>
 
@@ -33,7 +51,7 @@ h2 {
   font-size: 1.25em;
 }
 
-.about__us__container {
+.pro__rozvozce__container {
     min-height: 62vh;
     margin-left: auto;
     margin-right: auto;
@@ -43,7 +61,7 @@ h2 {
 }
 
 .background__image {
-  background-image: url(../assets/img/supplies_available_road.jpg);
+  background-image: url(../assets/img/full_supplies_not_available_road.jpg);
   display: flex;
   flex-basis: 100vw;
   justify-content: center;
@@ -63,6 +81,12 @@ h2 {
   opacity: 0.75;
   box-shadow: 0 0 10px 8px #9D9065;
   background-color: #fff9e8;
+}
+
+.kosik__logo,
+.tesco__logo {
+  width: 5vw;
+  height:auto;
 }
 
 @media screen and (min-width: 576px) and (max-width: 991px) {
@@ -98,10 +122,10 @@ h2 {
     padding: 8vh 0vw 8vh 0vw;
     margin-bottom: 19vh;
 }
-
-.about__us__container {
+.parcels__container {
   width: 62vw;
   }
+
 }
 
 @media screen and (min-width: 1200px) {
@@ -117,7 +141,7 @@ h2 {
     border: 5px solid #9D9065;
     padding: 1em;
 }
-.about__us__container {
+.parcels__container {
   width: 62vw;
   }
 }
